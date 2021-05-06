@@ -11,18 +11,17 @@ Book.prototype.hasRead = function(){
 }
 
 function addBookToLibrary(obj){
-    if(myLibrary >= 0){
-        checkLibrary(obj)
-    }
-    else {return myLibrary.push(obj)}
+    if(myLibrary.some((book) => book.name === obj.name)) return false;
+    return myLibrary.push(obj)
 }
 
-function checkLibrary(obj){
-    if(myLibrary.every(e => e === obj)){
-        console.log("testing")
-        return myLibrary.push(obj)
-    }
-    return null
+function removeBookFromLibrary(obj){
+    myLibrary = myLibrary.filter((book) => book.name !== obj)
+}
+
+
+function newForm() {
+    
 }
 
 
@@ -34,4 +33,7 @@ addBookToLibrary(book2)
 
 console.table(myLibrary)
 
-
+const newBook = document.querySelector("#new_button")
+newBook.addEventListener("click",()=>{
+    
+});  

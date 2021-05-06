@@ -1,5 +1,29 @@
-*, *::before, *::after {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Gotham Rounded, sans-serif;
-  font-weight: normal;
+  font-family: arial, sans-serif;
+}
+
+body {
+  background-color: #7c6c77;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #aaa694;
+  height: 3rem;
+}
+
+#new_button {
+  margin-top: 2rem;
+  background-color: #aaa694;
+  border: none;
+  height: 3rem;
+  width: 6rem;
+  border-radius: 10px;
+}
+
+#new_button:hover {
+  background-color: #ebf8b8;
 }
